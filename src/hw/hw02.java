@@ -10,6 +10,23 @@ import java.util.Scanner;
 public class hw02 {
 	public static void main(String[] args) {
 Scanner scn=new Scanner(System.in);
+System.out.print("請輸入n為多少個數(0<n<11)");
+int n=scn.nextInt();
+while(n>=11||n<=0){
+System.out.print("請重新輸入：");
+int n1=scn.nextInt();
+n1=n;
+break;
+}
+int x=1;
+int data[]=new int[n];
+while(x<n){
+for(int i=0;i<n;i++){
+System.out.print("請輸入整數");
+data[i]=scn.nextInt();
+x++;
+}
+}
 
 	}
 }
