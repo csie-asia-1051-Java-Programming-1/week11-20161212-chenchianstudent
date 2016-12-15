@@ -14,17 +14,22 @@ public class hw01 {
 	public static void main(String[] args) {
 		Scanner scn=new Scanner(System.in);
 		System.out.print("請輸入一段文字");
-		String n=scn.next();
+		String n=scn.nextLine();
+		System.out.print("請輸入要往後的數字");
+		int x=scn.nextInt();
 		char data[]=n.toCharArray();
 		char data2[] = null;
 		for(int i=0;i<data.length;i++){
-		char n1=(char)((int)data[i]+2);
+		char n1=(char)((int)data[i]+x);
 		if(n1=='{'){
 		n1='a';	
 		}else{
 		if(n1=='['){
 		n1='b';	
-		}	
+		}
+		if(n1=='"'){
+		n1=' ';	
+		}
 		}
 		System.out.print(n1);
 		}

@@ -12,20 +12,31 @@ public class hw02 {
 Scanner scn=new Scanner(System.in);
 System.out.print("請輸入n為多少個數(0<n<11)");
 int n=scn.nextInt();
-while(n>=11||n<=0){
-System.out.print("請重新輸入：");
-int n1=scn.nextInt();
-n1=n;
-break;
-}
 int x=1;
 int data[]=new int[n];
 while(x<n){
-for(int i=0;i<n;i++){
+for(int i=0;i<data.length;i++){
 System.out.print("請輸入整數");
 data[i]=scn.nextInt();
 x++;
 }
+}
+int sum=0;
+int show = 0;
+for(int i=0;i<data.length;i++){
+	for(int j=0;j<data.length-i;j++)
+	if(data[j+1]==data[j]){
+	sum++;
+	show=data[j];
+		
+	}	
+
+}
+int b=n/2;
+if(sum>b){
+System.out.print(show);	
+}else{
+System.out.print("no");	
 }
 
 	}

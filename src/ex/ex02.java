@@ -8,21 +8,31 @@ import java.util.Scanner;
  */
 public class ex02 {
 	public static void main(String[] args) {
-		Scanner scn=new Scanner(System.in);
-		int x = 0;
-		int sum=0;
-		while(true){
-		int n=scn.nextInt();
-		x++;
-		sum=sum+n;
-		System.out.print("是否要繼續(Y/N)");
-		char re=scn.next().charAt(0);
-		if(re=='N'||re=='n'){
-		break;	
-		}
-		}
-		System.out.print("Size="+x);
-		System.out.println("平均值為"+(double)sum/x);
-			}
-			
-		}
+Scanner scn=new Scanner(System.in);
+String n=scn.nextLine();
+String m="";
+float sum=0;
+float sum1=0;
+int a=0;
+for(int i=0;i<n.length();i++){
+if(n.charAt(i)!=' '){
+m=""+n.charAt(i);
+}
+else{
+sum1=Integer.parseInt(m);
+sum=sum+sum1;
+a++;
+}
+if(i==n.length()-1){
+sum1=Integer.parseInt(m);
+sum=sum+sum1;
+}
+}
+double average;
+sum1=(float)Math.round((sum/a)*1000f)/1000f;
+System.out.println("Size:"+a);
+System.out.print("平均數:"+sum1);
+		
+		
+	}
+}
